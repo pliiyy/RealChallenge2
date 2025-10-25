@@ -38,12 +38,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   const logout = async () => {
+    setLoading(true);
     localStorage.removeItem("token");
     setUser(null);
     setMenus([]);
-    setLoading(false);
     await api.post("/logout");
     window.location.replace("/login");
+    setLoading(true);
   };
 
   useEffect(() => {

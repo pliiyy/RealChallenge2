@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("nim_nidn")->unique();
             $table->string("nama");
+            $table->string("gelar_depan")->nullable();
+            $table->string("gelar_belakang")->nullable();
+            $table->string("jabatan_akademik")->nullable();
             $table->text("deskripsi")->nullable();
             $table->string("no_telepon")->nullable();
             $table->enum("jenis_kelamin",["L","P"])->nullable();

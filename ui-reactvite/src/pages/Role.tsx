@@ -264,7 +264,7 @@ const TambahEditRole = ({
       >
         <div className="my-4 mx-2">
           <Form labelCol={{ span: 3 }} onFinish={handleSubmit}>
-            <Form.Item label="nama">
+            <Form.Item label="Nama Role">
               <Input
                 value={currData.nama}
                 onChange={(e) => setData({ ...currData, nama: e.target.value })}
